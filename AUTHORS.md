@@ -12,6 +12,8 @@ A bug in `.tgf` output [[4]](https://github.com/davidfraser/pyan/pull/4) pointed
 
 This Python 3 port, analyzer expansion, and additional refactoring by Juha Jeronen.
 
+Dockerizing of the port by [hristog](https://github.com/hristog).
+
 HTML and SVG export by Jan Beitner.
 
 Support for relative imports by Jan Beitner and Rakan Alanazi.
