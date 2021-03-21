@@ -1,5 +1,24 @@
 # Pyan3
 
+## tl;dr about this fork
+
+This fork dockerizes Pyan3 via [`Dockerfile`](https://github.com/hristog/pyan/blob/master/Dockerfile) and [`graph.sh`](https://github.com/hristog/pyan/blob/master/graph.sh).
+
+It can be employed as follows:
+```bash
+$ docker build -t pyan:latest .
+$ cd <dir_of_python_project_of_interest>
+$ docker run --rm pyan:latest -v `realpath .`:/input -v `realpath <local_dir_for_output>`:/output <output_png_file_name>
+```
+Please, note that `<dir_of_python_project_of_interest>` and `<local_dir_for_output>` must be substituted, accordingly, with local paths.
+`<output_png_file_name>` is the desired output file name.
+
+Upon completion of execution, `<output_png_file_name` will be stored in `<local_dir_for_output>`.
+
+The remainder of this document comes from [https://github.com/Technologicat](https://github.com/Technologicat/pyan/blob/master/README.md).
+
+## Overview
+
 Offline call graph generator for Python 3
 
 [![Build Status](https://travis-ci.com/edumco/pyan.svg?branch=master)](https://travis-ci.com/edumco/pyan)
