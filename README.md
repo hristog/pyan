@@ -8,7 +8,7 @@ It can be employed as follows:
 ```bash
 $ docker build -t pyan:latest .
 $ cd <dir_of_python_project_of_interest>
-$ docker run --rm pyan:latest -v `realpath .`:/input -v `realpath <local_dir_for_output>`:/output <output_png_file_name>
+$ docker run --rm -v `realpath .`:/input -v `realpath <local_dir_for_output>`:/output pyan:latest <output_png_file_name>
 ```
 Please, note that `<dir_of_python_project_of_interest>` and `<local_dir_for_output>` must be substituted, accordingly, with local paths.
 `<output_png_file_name>` is the desired output file name.
