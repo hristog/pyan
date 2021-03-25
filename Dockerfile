@@ -3,7 +3,7 @@ FROM debian:buster-slim
 WORKDIR /tmp/pyan
 
 COPY . .
-COPY graph.sh /pyan
+COPY graph.sh /pyan/graph.sh
 
 RUN apt-get -y update \
 	&& apt-get install -y --no-install-recommends \
@@ -20,7 +20,7 @@ RUN python3 -m pip install --upgrade \
 		pip \
 		setuptools \
 		wheel \
-	&& python3 -m pip install --no-index --find-links file:///tmp/pyan \
+	&& python3 -m pip install /tmp/pyan \
 	&& rm -rf /tmp/pyan
 
 ENTRYPOINT ["/pyan/graph.sh"]
