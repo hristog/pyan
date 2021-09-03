@@ -13,6 +13,11 @@ $ docker run --rm -v `realpath .`:/input -v `realpath <local_dir_for_output>`:/o
 Please, note that `<dir_of_python_project_of_interest>` and `<local_dir_for_output>` must be substituted, accordingly, with local paths.
 `<output_png_file_name>` is the desired output file name.
 
+The input directory can be further parametrized via the `$PYAN_INPUT_DIR` environment variable, e.g.:
+```
+$ docker run --rm -e PYAN_INPUT_DIR=/custom_input_dir_name -v `realpath .`:/custom_input_dir_name -v `realpath <local_dir_for_output>`:/output pyan:latest <output_png_file_name>
+```
+
 Upon completion of execution, `<output_png_file_name` will be stored in `<local_dir_for_output>`.
 
 The remainder of this document comes from [https://github.com/Technologicat](https://github.com/Technologicat/pyan/blob/master/README.md).

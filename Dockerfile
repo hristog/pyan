@@ -23,5 +23,7 @@ RUN python3 -m pip install --upgrade \
 	&& python3 -m pip install /tmp/pyan \
 	&& rm -rf /tmp/pyan
 
+ENV PYAN_INPUT_DIR /input
+
 ENTRYPOINT ["/pyan/graph.sh"]
 
